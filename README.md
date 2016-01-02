@@ -1,11 +1,11 @@
-## Blender gif batch script
-# By Sebastian Lenton
+# Blender gif batch script
+## By Sebastian Lenton
 
 └(=^‥^=)┐
 
 Below are instructions re the complete process:
 
-## Preparing the models:
+## Preparing the models
 1. IMPORTANT: in your preferences, enable absolute paths (File > untick relative paths), or else there won't be any textures. Ensure this has been set when saving the OBJ into a .blend file.
 2. Open initial.blend (consider temporarily setting this as your default blend file). Note, the only rendering settings set in the script are X and Y dimensions. Number of animation frames is also set within the script. Everything else is done as per settings in initial.blend. If you want to set consistent render settings, either set them in initial.blend or modify the script to set these.
 3. Import your OBJ file.
@@ -13,15 +13,14 @@ Below are instructions re the complete process:
 5. Ensure only one mesh is present (the OBJ). Do not set lamps and camera- this is done via the script. (But, you do not need to delete the lamp or camera either).
 6. Save as .blend. IMPORTANT: ensure the model is saved in object mode (this is why the script wouldn't work the other day). I tried to set this via the script, but couldn't get it to work.
 
-## RUNNING THE SCRIPT:
+## Running the script
 1. Ensure correct path to Blender is set in batchModels.sh (see script for example- obv this path will be different for you).
 Note, you cannot set an alias to Blender in your .profile file, unless you source your .profile in the script(?).
 2. Ensure path to blendBatchRotate.py is set in batchModels.sh (see script for example- obv this path will be different for you).
 3. Run the script as follows:
+`/path/to/batchModels.sh /path/to/input/blends /path/to/output`
 
-/path/to/batchModels.sh /path/to/input/blends /path/to/output
-
-eg: /Users/sebastianlenton/Code/blender/batchModels.sh /Users/sebastianlenton/Desktop/blendermodels /Users/sebastianlenton/Desktop/output
+eg: `/Users/sebastianlenton/Code/blender/batchModels.sh /Users/sebastianlenton/Desktop/blendermodels /Users/sebastianlenton/Desktop/output`
 
 The output folder will be created if it does not exist already.
 
