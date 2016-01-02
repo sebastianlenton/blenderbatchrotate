@@ -83,10 +83,12 @@ kf.interpolation = 'LINEAR'
 bpy.ops.object.select_all(action='DESELECT')
 
 #add new camera
-bpy.ops.object.camera_add(view_align=False, enter_editmode=False, location=(0.0, -6.0, 0.0), rotation=(1.5708, 0.0, 0.0))
+bpy.ops.object.camera_add(view_align=False, enter_editmode=False, location=(0.0, -6.50764, 0.0), rotation=(1.570797, 0.0, 0.0))
 
 #make camera the active camera (what this is actually doing is grabbing any camera it can find I think? But fingers crossed there will only ever be one camera)
 bpy.context.scene.camera = bpy.data.objects['Camera']
+bpy.context.object.data.type = 'ORTHO'
+bpy.context.object.data.ortho_scale = 7.31429
 
 #set renderpath
 #will save as ../filename/filename0001.png and so on
